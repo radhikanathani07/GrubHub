@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root{
+    --main-color:#76934a;
+    --font-color:#ffffff;
+    --lighter-bg-color:#ffd180;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+    --text-shadow2:0 1.5rem 3rem rgba(101, 97, 97, 0.3);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration:none;
+    text-transform: capitalize;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color:var(--main-color);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width: 400px;
+    min-height: 300px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    padding:30px 30px;
+}
+
+.container .login-text{
+    color: var(--font-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align:center;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: capitalize;
+}
+
+
+.container .login-email .input-group{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.container .login-email .input-group input{
+    width:100%;
+    height:100%;
+    border: 2px solid #fff;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    box-shadow:var(--box-shadow);
+    transition: .3s;
+}
+
+.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+    border-color:var(--main-color);
+}
+
+.container .login-email .input-group button{
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align:center;
+    background:var(--lighter-font-color);
+    font-size: 1rem;
+    color:var(--main-color);
+    border:2px solid var(--main-color);
+    outline:none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.container .login-email .input-group button:hover{
+    transform: translateY(-5px);
+    background:var(--font-color);
+}
+
+.login-register-text{
+    color:black;
+    font-weight:600;
+}
+
+.login-register-text a{
+    text-decoration: none;
+    color:var(--lighter-font-color);
+}
+

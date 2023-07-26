@@ -1,0 +1,240 @@
+
+:root{
+    --main-color:#76934a;
+    --font-color:#ffffff;
+    --lighter-bg-color:#ffd180;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+    --text-shadow2:0 1.5rem 3rem rgba(101, 97, 97, 0.3);
+}
+body{
+    padding-top: 60px;
+    background-color:white;
+}
+.recipe{
+    padding:0;
+}
+.recipe .container{
+    background-color: var(--light-white);
+    font-size: 16px;
+    padding:3em 2.8em;
+    width: 90vw;
+    max-width: 32em;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    top: 2em;
+    border-radius: 0.6em;
+    border: 2px solid #76934a;
+    box-shadow: 0 1.2em 2.5em --box-shadow  ;
+}
+
+.search-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15fr 3fr;
+    /* gap: 1.2em; */
+    justify-items: end;
+}
+
+.search-container #user-inp{
+    font-size: 1em;
+    padding: 0.6em;
+    outline: none;
+    border-bottom: 2px solid;
+}
+
+
+.search-container #submit
+{
+    background-color: #76934a;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: block  ;
+font-size: 16px;
+margin: 5% auto;
+cursor: pointer;
+border-radius: 4px;
+transition-duration: 0.4s;
+
+/* align-self: center;
+justify-self: end; */
+}
+.search-container #submit:hover{
+background-color:#ffd180;
+}
+.details{
+    background-color: var(--main-color);
+    position:relative;
+    margin: 0.5em 0 0 0;
+    text-align: center;
+    padding: 0.6em 0;
+
+}
+.details h2{
+    
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.recipe-details{
+    position: absolute;
+    background-color: white;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left:0;
+    z-index: 2;
+    border-radius: 0.6em ;
+    display: none;
+}
+
+.recipe-details pre{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 2.5em 1.2em 1.2em 1.2em;
+
+}
+
+#hide-recipe{
+    font-size: 1em;
+    position: relative;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: var(--main-color);
+    border: none;
+    top: 1.2em;
+    left:90%;
+    border-radius: 0.3em;
+    color: white;
+}
+
+#show-recipe{
+    font-size: 1em;
+    position: relative;
+    left:75%;
+    padding: 0.9em 0.6em;
+    background-color: var(--main-color);
+    border: none;
+    top: 1.5em;
+    border-radius: 0.3em;
+    font-weight: 600;
+    color: white;
+}
+ul{
+    font-size: 18px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.8em 1.1em;
+    padding: 0 2px;
+    /* align-items: center; */
+    align-content: stretch;
+    justify-content: space-around;
+    justify-items: start;
+
+    
+}
+
+h4{
+    position: relative;
+    padding: 1.2em 0;
+    font-size: 20px;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        font-size: 14px;
+
+    }
+    
+}
+
+.display{
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: 600;
+    color:var(--main-color);
+}
+
+img{
+    display:block;
+    margin:1.5em auto 0 auto;
+    width: 150px;
+    height: 150px;
+}
+
+.instruct{
+    inline-size: 500px;
+    overflow: hidden;
+    font-size: 18px;
+    color: var(--main-color);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    padding: 1.2em 1.2em 1.2em 1.2em;
+    font-weight: 300;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 0.6em;
+    position: relative;
+    top:2em;
+
+}
+
+.display{
+    background-color: var(--light-white);
+    font-size: 16px;
+    padding:3em 2.8em;
+    width: 90vw;
+    max-width: 32em;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    top: 2em;
+    border-radius: 0.6em;
+    border: 2px solid;
+    box-shadow: 0 1.2em 2.5em --box-shadow  ;
+
+}
+
+#audio{
+    font-size: 1em;
+    position: relative;
+    /* left: 75%; */
+    padding: 0.5em 0.6em;
+    background-color: var(--main-color);
+    border: none;
+    top: 45px;
+    border-radius: 0.3em;
+    font-weight: 600;
+    color: white;
+}
+
+#speak{
+    font-size: 1em;
+    background-color:white ;
+    border: 2px solid var(--main-color);
+    font-weight: 600;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    cursor: pointer;
+}

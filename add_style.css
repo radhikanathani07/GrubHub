@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+    --main-color:#76934a;
+    --font-color:#ffffff;
+    --lighter-bg-color:#ffd180;
+    --black:#222;
+    --white:#fff;
+    --light-black:#777;
+    --light-white:#fff9;
+    --dark-bg:rgba(0,0,0,.7);
+    --light-bg:#A674AB;
+    --border:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+    --text-shadow2:0 1.5rem 3rem rgba(101, 97, 97, 0.3);
+}
+*{
+    position:relative;
+}
+.add-recipe {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+
+    top:50px;
+}
+.inside-add h3{
+font-size: 60px;
+display:flex;
+justify-content: center;
+color:black;
+
+
+}
+
+.inside-add .sub-title{
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    color:black;
+}
+.inside-add .form{
+    display:flex;
+    justify-content: center;
+    color:black;
+
+}
+.inside-add .form table tr td label{
+    display: block;
+	margin-top: 10px;
+    font-size: 20px;
+}
+.inside-add .form table tr td input,.inside-add .form table tr td textarea{
+    /* border:2px solid #210124; */
+    margin-top: 10px;
+    width: 100%;
+    height:100%;
+    padding:10px 0;
+    color:var(--main-color);
+background-color:#fff9;
+border:var(--border);
+border-radius:5px;
+}
+textarea{
+    resize: vertical;
+}
+input[type="text"]::placeholder, textarea::placeholder{
+                 
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}
+/* input[type=file]{
+    margin: 0 auto;
+}
+ */
+ .inside-add .form table tr td  #name, .inside-add .form table tr td select{
+    
+    width: 100%;
+    height:100%;
+    padding:10px 0;
+    -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+            /* margin:15%; */
+ }
+ #fileUpload
+ {
+    border:none;
+ }
+ input[type="file"]::file-selector-button {
+    border: 2px solid #76934a;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: #76934a;
+    transition: 1s;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+    background-color: #ffd180;
+    border: 2px solid #ffd180;
+  }
+td{
+    padding-left:5%;
+    /* border: 2px solid black; */
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+.submit , .reset
+{
+    background-color: #76934a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block  ;
+  font-size: 16px;
+  margin:0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  width:25%;
+
+  /* align-self: center;
+  justify-self: end; */
+}
+.submit:hover, .reset:hover{
+    background-color:#ffd180;
+}

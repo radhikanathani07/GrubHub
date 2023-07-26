@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="avatar.jpeg" class="avatar">
+        <h1>Login</h1>
+        <form action="" method="POST">
+            <p>Username</p>
+            <input type="text" name="userid" placeholder="Enter username">
+            <p>Password</p>
+            <input type="password" name="pass" placeholder="Enter password">
+            <input type="submit" name="submit" value="Login">
+            <a href="#">Forgot password?</a><br>
+            <a href="#">New user?</a>
+        </form>
+    </div>
+</body>
+
+</html>
+<?php
+if (isset($_POST['submit'])) {
+    $conn = mysqli_connect("localhost", "root", "", "user");
+    if (isset($_POST['userid'])) {
+        if (isset($_POST['pass'])) {
+            $userid = $_POST['userid'];
+            $password = $_POST['pass'];
+            $flag = 0;
+            $sql = "Select password from users where username = '$userid'";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = $mysqli_fetch_array($result)) {
+                    if ($row['password'] == $password) {
+                        // $sessionid=$row['sessionid'];
+                        echo "<script type='text/javascript'>alert('Successfully Login.')</script>";
+                        session_start();
+                        $flag = 1;
+                        $session['user_id'] = $userid;
+                        if ($session['user_id'] == $userid) {
+                            header("Location:home.page");
+                        }
+                    } else {
+                        echo "<script type='text/javascript'>alert('Incorrect Password.')</script>";
+                    }
+                }
+            } else {
+                echo "<script type='text/javascript'>alert('Username is incorrect.')</script>";
+            }
+        } else {
+            echo "<script type='text/javascript'>alert('Please enter the password.')</script>";
+        }
+    } else {
+        echo "<script type='text/javascript'>alert('Please enter a username')</script>";
+    }
+}
+
+?>
